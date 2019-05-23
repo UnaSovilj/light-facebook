@@ -9,6 +9,6 @@ import java.util.List;
 
 public interface CommentRepository extends JpaRepository<Comment, Long> {
 
-    @Query ("Select * from Comment C where C.post = ?1")
+    @Query("Select * from Comment C where C.post = ?1")
     List<Comment> findAllByPost(Post post);
 }
